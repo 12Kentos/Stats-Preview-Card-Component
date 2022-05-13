@@ -1,0 +1,187 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #0a0c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: Inter, sans-serif;
+}
+
+.stats-card-column-container {
+  width: 111rem;
+  height: 44.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.stats-card-info-container {
+  background-color: #1b1937;
+  border-radius: 0.8rem 0 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-card-img-container {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(90, 12, 138, 0.6),
+      rgba(90, 12, 138, 0.6)
+    ),
+    url(./images/image-header-desktop.jpg);
+  background-size: cover;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.stats-card-info-title-container {
+  margin-left: 7.15rem;
+  width: 40.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.stats-card-info-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  color: #fff;
+}
+
+.stats-card-into-title-insights {
+  color: #ab5cdb;
+}
+
+.stats-card-info-text-container {
+  width: 37.4rem;
+  margin-left: 7.15rem;
+  margin-bottom: 7.2rem;
+}
+
+.stats-card-info-text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.stats-card-stats-container {
+  margin-left: 7.15rem;
+  display: flex;
+}
+
+.stats-card-companies-stat-container,
+.stats-card-templates-stat-container,
+.stats-card-queries-stat-container {
+  width: 8.3rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.stats-card-companies-stat-container {
+  margin-right: 6.3rem;
+}
+
+.stats-card-templates-stat-container {
+  margin-right: 6rem;
+}
+
+.number-style {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+.text-style {
+  font-family: Lexend Deca, sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  body {
+    margin-bottom: 35rem;
+  }
+
+  .stats-card-column-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(24rem, 54rem);
+    grid-template-areas: "header" "footer";
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+
+  .card-column1 {
+    grid-area: footer;
+    height: 54rem;
+  }
+
+  .card-column2 {
+    grid-area: header;
+  }
+
+  .stats-card-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stats-card-info-title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+
+  .stats-card-info-title-container {
+    width: 26.4rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .stats-card-info-text-container {
+    width: 26.4rem;
+  }
+
+  .stats-card-stats-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats-card-info-container {
+    border-radius: 0 0 0.8rem 0.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .stats-card-img-container {
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+
+  .stats-card-info-title-container,
+  .stats-card-info-text-container,
+  .stats-card-stats-container {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .stats-card-templates-stat-container,
+  .stats-card-companies-stat-container {
+    margin-right: 0;
+    margin-bottom: 2.4rem;
+  }
+}
